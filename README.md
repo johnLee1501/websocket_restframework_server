@@ -1,4 +1,4 @@
-#Api Rest con implementación de websocket
+# Api Rest con implementación de websocket
 
 Aplicación desarrollada con Django Channels Rest Framework que envía mensajes al cliente sobre todas las operaciones CRUD realizadas a través del ORM de Django en un modelo.
 
@@ -25,7 +25,7 @@ Python > 3.6
 Primero, clona el proyecto en tu computadora
 
 ```
-git clone https://github.com/johnLee1501/mycactus.git
+git clone https://github.com/johnLee1501/websocket_restframework_server.git
 ```
 
 luego, cree un entorno virtual para el proyecto, puede usar virtualenvwrapper-win si su sistema operativo es Windows
