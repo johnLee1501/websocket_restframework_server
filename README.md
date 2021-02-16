@@ -56,14 +56,29 @@ py manage.py runserver
 
 Ingresa a localhost:8000/admin o localhost:8000/swagger y explore
 
-Nota: necesitará credenciales de usuario para acceder al panel de administración de Django y para poder hacer uso de los diferentes endpoints de Swagger, asegúrese de crear un usuario con
-
 ```
 py manage.py createusersuperuser
 ```
+
+Para probar el funcionamiento del WebSocket, puedes instalar el complemento 'Simple Web Socket Client' en tu navegador y suscribirte a 'ws://127.0.0.1:8000/ws/user' 
+
+![simple_web_socket_client](https://user-images.githubusercontent.com/71096926/108119025-2cc84280-706d-11eb-97e9-de939931ac80.jpg)
+
+Ya puedes visualizar los cambios de tu modelo 
+
+![put_swagger](https://user-images.githubusercontent.com/71096926/108119024-2c2fac00-706d-11eb-9bf0-b0f8c4d41876.jpg)
+
+![simple_web_socket_client_listen](https://user-images.githubusercontent.com/71096926/108119026-2cc84280-706d-11eb-9a11-e63839f73f11.jpg)
+
 
 ## Autor
 
 * **John Vega**
 
-## Screenshots
+##Screenshot
+
+![swagger crud](https://user-images.githubusercontent.com/71096926/108119021-2afe7f00-706d-11eb-9130-cee852b13177.jpg)
+
+
+
+
