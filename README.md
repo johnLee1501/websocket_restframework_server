@@ -75,7 +75,7 @@ Ya puedes visualizar los cambios de tu modelo
 
 * **John Vega**
 
-##Screenshot
+## Otras capturas de pantalla
 
 ![swagger crud](https://user-images.githubusercontent.com/71096926/108119021-2afe7f00-706d-11eb-9130-cee852b13177.jpg)
 
