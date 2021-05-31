@@ -17,7 +17,5 @@ class UserConsumer(AsyncAPIConsumer):
 
     @model_change.serializer
     def model_serialize(self, instance, action, **kwargs):
-        user_model = User.objects.all()
-        user_serializer = UserSerializer(data=user_model, many=True)
-        user_serializer.is_valid()
+        user_serializer = UserSerializer(instance)
         return user_serializer.data
