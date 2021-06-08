@@ -34,5 +34,5 @@ router = SimpleRouter()
 router.register(r'users', UserViewSet)
 urlpatterns = [
     path('', include(router.urls)),
-    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0))
+    path('', schema_view.with_ui('swagger', cache_timeout=0))
 ]
