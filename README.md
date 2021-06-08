@@ -78,7 +78,7 @@ Listo! ya puedes ejecutarlo
 py manage.py runserver
 ```
 
-Ingresa a localhost:8000/admin o localhost:8000/swagger y explore
+Ingresa a  localhost:8000  y explora
 
 ```
 py manage.py createusersuperuser
