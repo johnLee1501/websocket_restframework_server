@@ -48,6 +48,30 @@ py manage.py makemigrations
 py manage.py migrate
 ```
 
+Inicia un servidor Redis en el puerto 6379 (Necesitas tener instalado docker desktop en tu máquina). Ejecuta el siguiente comando:
+```
+docker run -p 6379:6379 -d redis:5
+```
+Si no deseas instalar redis y prefieres optar por una solución más sencillá, puedes utilizar un canal de testing:
+Ve a settings.py y remplaza la configuración del canal:
+```
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [os.environ.get('REDIS_URL', 'redis://localhost:6379')],
+        },
+    },
+}
+```
+por esto
+```
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
+}
+```
 Listo! ya puedes ejecutarlo
 
 ```
