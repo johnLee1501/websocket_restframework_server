@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
+import logging
 import os
 from pathlib import Path
 
@@ -85,10 +86,12 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            "hosts": ['redis://localhost:6379'],
+            "hosts": [os.getenv('REDIS_URL', 'redis://localhost:6379')],
         },
     },
 }
+
+logging.warning('HOST = ' + CHANNEL_LAYERS['default']['CONFIG']['hosts'][0])
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
